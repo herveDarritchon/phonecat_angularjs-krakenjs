@@ -1,0 +1,86 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.3.24
+3 info using node@v0.10.25
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp',
+6 verbose install   [ 'phantomjs',
+6 verbose install     'karma',
+6 verbose install     'karma-junit-reporter',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-ng-scenario',
+6 verbose install     'karma-chrome-launcher',
+6 verbose install     'karma-firefox-launcher',
+6 verbose install     'karma-html2js-preprocessor',
+6 verbose install     'karma-requirejs',
+6 verbose install     'karma-coffee-preprocessor',
+6 verbose install     'karma-phantomjs-launcher',
+6 verbose install     'karma-script-launcher',
+6 verbose install     'karma-safari-launcher' ] ]
+7 info preinstall angular-phonecat@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping karma-junit-reporter@~0.1 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+10 verbose already installed skipping phantomjs@~1.9 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+11 verbose already installed skipping karma@~0.12.2 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+12 verbose already installed skipping karma-jasmine@~0.1.5 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+13 verbose already installed skipping karma-ng-scenario@~0.1 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+14 verbose already installed skipping karma-firefox-launcher@~0.1.0 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+15 verbose already installed skipping karma-chrome-launcher@~0.1.2 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+16 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+17 verbose already installed skipping karma-requirejs@~0.2.0 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+18 verbose already installed skipping karma-coffee-preprocessor@~0.1.0 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+19 verbose already installed skipping karma-phantomjs-launcher@~0.1.0 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+20 verbose already installed skipping karma-script-launcher@~0.1.0 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+21 verbose already installed skipping karma-safari-launcher@~0.1.1 /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+22 silly resolved []
+23 info build /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+24 verbose linkStuff [ false,
+24 verbose linkStuff   false,
+24 verbose linkStuff   false,
+24 verbose linkStuff   '/home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial' ]
+25 info linkStuff angular-phonecat@0.0.0
+26 verbose linkBins angular-phonecat@0.0.0
+27 verbose linkMans angular-phonecat@0.0.0
+28 verbose rebuildBundles angular-phonecat@0.0.0
+29 verbose rebuildBundles [ 'karma',
+29 verbose rebuildBundles   'karma-chrome-launcher',
+29 verbose rebuildBundles   'karma-coffee-preprocessor',
+29 verbose rebuildBundles   'karma-firefox-launcher',
+29 verbose rebuildBundles   'karma-html2js-preprocessor',
+29 verbose rebuildBundles   'karma-jasmine',
+29 verbose rebuildBundles   'karma-junit-reporter',
+29 verbose rebuildBundles   'karma-ng-scenario',
+29 verbose rebuildBundles   'karma-phantomjs-launcher',
+29 verbose rebuildBundles   'karma-requirejs',
+29 verbose rebuildBundles   'karma-safari-launcher',
+29 verbose rebuildBundles   'karma-script-launcher',
+29 verbose rebuildBundles   'phantomjs',
+29 verbose rebuildBundles   'requirejs' ]
+30 verbose rebuild bundle /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp/node_modules/requirejs
+31 info build /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp/node_modules/requirejs
+32 info preinstall requirejs@2.1.11
+33 verbose linkStuff [ false,
+33 verbose linkStuff   false,
+33 verbose linkStuff   false,
+33 verbose linkStuff   '/home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp/node_modules' ]
+34 info linkStuff requirejs@2.1.11
+35 verbose linkBins requirejs@2.1.11
+36 verbose link bins [ { 'r.js': './bin/r.js' },
+36 verbose link bins   '/home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp/node_modules/.bin',
+36 verbose link bins   false ]
+37 verbose linkMans requirejs@2.1.11
+38 verbose rebuildBundles requirejs@2.1.11
+39 error Error: ENOENT, chmod '/home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp/node_modules/requirejs/bin/r.js'
+40 error If you need help, you may report this *entire* log,
+40 error including the npm and node versions, at:
+40 error     <http://github.com/isaacs/npm/issues>
+41 error System Linux 3.8.0-35-generic
+42 error command "/usr/bin/node" "/usr/bin/npm" "install"
+43 error cwd /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp
+44 error node -v v0.10.25
+45 error npm -v 1.3.24
+46 error path /home/ahdi7503/WorkingZone/Javascript/WorkspaceJS/Angular/MyPhoneCatTutorial/myPhoneCatApp/node_modules/requirejs/bin/r.js
+47 error code ENOENT
+48 error errno 34
+49 verbose exit [ 34, true ]

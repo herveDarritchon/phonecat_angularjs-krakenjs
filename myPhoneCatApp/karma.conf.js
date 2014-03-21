@@ -14,23 +14,25 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/js/lib/jquery.js',
-      'app/js/lib/bootstrap.js',
-      'app/js/lib/angular.js',
-	  'app/js/lib/angular-*.js',
-      'app/js/*.js',
-      'app/js/**/*.js',
-      'test/lib/angular-mocks.js',	  
-      'test/unit/*Spec.js',
-    ],
+    'app/js/lib/jquery.js',
+    'app/js/lib/bootstrap.js',
+    'app/js/lib/angular.js',
+    'app/js/lib/angular-*.js',
+    'app/js/*.js',
+    'app/js/**/*.js',
+    'test/lib/angular-mocks.js',	  
+    'test/unit/*Spec.js',
+    // this file only gets watched and is otherwise ignored
+    {pattern: 'app/index.html', included: false, served: false}
+],
 
 //      'test/unit/**/*Spec.js'
 
     // list of files to exclude
     exclude: [
-      'app/js/lib/angular-loader.js',
-      'app/js/lib/*.min.js',
-      'app/js/lib/angular-scenario.js'      
+    'app/js/lib/angular-loader.js',
+    'app/js/lib/*.min.js',
+    'app/js/lib/angular-scenario.js'      
     ],
 
 
@@ -77,14 +79,14 @@ module.exports = function(config) {
     // if true, it capture browsers, run tests and exit
     singleRun: false,
 
-   plugins : [
-            'karma-junit-reporter',
-            'karma-chrome-launcher',
-            'karma-safari-launcher',
-            'karma-firefox-launcher',
-            'karma-script-launcher',
-            'karma-jasmine'
-            ],
+    plugins : [
+    'karma-junit-reporter',
+    'karma-chrome-launcher',
+    'karma-safari-launcher',
+    'karma-firefox-launcher',
+    'karma-script-launcher',
+    'karma-jasmine'
+    ],
 
     junitReporter : {
       outputFile: 'test_out/unit.xml',

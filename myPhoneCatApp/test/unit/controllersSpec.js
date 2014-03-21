@@ -40,10 +40,5 @@ describe('My first suite', function(){
     expect(scope.name).toBe('World Wide Web !');
   }));
 
- it("size of phone list should be 3", inject(function($controller) {
-    var scope = {},
-    ctrl = $controller('PhoneListCtrl', {$scope:scope});
-
-    expect(scope.size).toBe(3);
-  }));
 });
+

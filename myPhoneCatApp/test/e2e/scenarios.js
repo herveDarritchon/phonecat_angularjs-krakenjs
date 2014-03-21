@@ -4,8 +4,46 @@
 
 describe('my app', function() {
 
-  beforeEach(function() {
-    browser().navigateTo('app/index.html');
-  });
+	beforeEach(function() {
+		browser().navigateTo('app/index.html');
+	});
 
+});
+
+describe('PhoneCat App', function() {
+
+	describe('Phone list view', function() {
+
+		beforeEach(function() {
+			browser().navigateTo('../../app/index.html');
+		});
+
+
+		it("Number of row should be 8", function() {
+			expect(repeater('.table-row').count()).toBe(8);
+		});
+
+	});
+});
+
+
+describe('PhoneCat App', function() {
+
+	describe('Phone list view', function() {
+
+		beforeEach(function() {
+			browser().navigateTo('../../app/index.html');
+		});
+
+
+		it('should filter the phone list as user types into the search box', function() {
+			expect(repeater('.phones li').count()).toBe(3);
+
+			input('query').enter('nexus');
+			expect(repeater('.phones li').count()).toBe(1);
+
+			input('query').enter('motorola');
+			expect(repeater('.phones li').count()).toBe(2);
+		});
+	});
 });
