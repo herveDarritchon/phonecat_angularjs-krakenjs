@@ -3,16 +3,22 @@ module.exports = function(config){
     basePath : '../',
 
     files : [
-      'app/lib/angular/angular.js',
-      'app/lib/angular/angular-*.js',
+      'app/js/lib/jquery.js',
+      'app/js/lib/bootstrap.js',
+      'app/js/lib/angular.js',
+      'app/js/lib/angular-*.js',
+      'app/js/*.js',
       'app/js/**/*.js',
-      'test/unit/**/*.js'
+      'test/lib/angular-mocks.js',
+      'test/**/*Spec.js',
+      // this file only gets watched and is otherwise ignored
+      {pattern: 'app/index.html', included: false, served: false}
     ],
 
     exclude : [
-      'app/lib/angular/angular-loader.js',
-      'app/lib/angular/*.min.js',
-      'app/lib/angular/angular-scenario.js'
+      'app/js/lib/angular-loader.js',
+      'app/js/lib/*.min.js',
+      'app/js/lib/angular-scenario.js'
     ],
 
     autoWatch : true,
