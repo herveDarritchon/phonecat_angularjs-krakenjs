@@ -17,9 +17,10 @@ module.exports = function(config) {
       'app/js/lib/jquery.js',
       'app/js/lib/bootstrap.js',
       'app/js/lib/angular.js',
-      'app/js/controllers.js',
+	  'app/js/lib/angular-*.js',
       'app/js/*.js',
       'app/js/**/*.js',
+      'test/lib/angular-mocks.js',	  
       'test/unit/*Spec.js',
     ],
 
@@ -27,7 +28,9 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      
+      'app/js/lib/angular-loader.js',
+      'app/js/lib/*.min.js',
+      'app/js/lib/angular-scenario.js'      
     ],
 
 
@@ -61,8 +64,9 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome'],
-//    browsers: ['Chrome', 'Firefox', 'Safari'],
+    browsers: ['Firefox'],
+	//    browsers: ['Chrome'],
+	//    browsers: ['Chrome', 'Firefox', 'Safari'],
 
 
     // If browser does not capture in given timeout [ms], kill it

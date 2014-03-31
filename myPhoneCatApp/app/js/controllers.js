@@ -1,9 +1,6 @@
 
 var phonecatApp=angular.module('phonecatApp', []);
-/*.config(function($interpolateProvider){
-        $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-    }
-);*/
+
 phonecatApp.controller('PhoneListCtrl', function ($scope) {
 	console.log("This is it !");
 	$scope.paragraphTitle="This is my mobile list";
