@@ -10,4 +10,5 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
 	{'name':'Motorola XOOMTM with Wi- Fi','snippet':'The Next, Next Generation tablet.'},
 	{'name':'MOTOROLA XOOMTM','snippet':'The Next, Next Generation tablet.'}
 	];
+	$scope.size=$scope.phones.length;
 });
