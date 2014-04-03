@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="phonecatApp" ng-controller="PhoneListCtrl">
 <head>
 	<meta charset="utf-8">
-	<title>My PhoneCat Tutorial - AngularJS + KrakenJS (over Express and NodeJS)</title>
+	<title ng-bind-template="My PhoneCat Tutorial - AngularJS + KrakenJS (over Express and NodeJS) - {{query}}">My PhoneCat Tutorial - AngularJS + KrakenJS (over Express and NodeJS)</title>
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 
@@ -14,22 +14,29 @@
 </head>
 <body>
 	
-	<div id="wrapper" ng-controller="PhoneListCtrl">
+	<div id="wrapper">
 		<h1>Hello {{name}}</h1>
 		<h2>{{paragraphTitle}}</h2>
 		<h3>Number of elements : {{size}}</h3>
+
+		<div id="status">Current filter: {{query}}</div>
 
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span2">
 					<!--Sidebar content-->
 					Search: <input ng-model="query">
+					Sort by:
+					<select ng-model="orderProp">
+						<option value="name">Alphabetical</option>
+						<option value="age">Newest</option>
+					</select>
 				</div>
 				<div class="span12">
 					<!--Body content-->
 
 					<ul class="phones">
-						<li class="list-row" ng-repeat="phone in phones | filter:query">
+						<li class="list-row" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
 							{{phone.name}}
 							<p>{{phone.snippet}}</p>
 						</li>

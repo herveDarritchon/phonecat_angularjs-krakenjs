@@ -8,16 +8,16 @@ module.exports = function(config){
         'test/e2e/**/*.js'
     ],
 
-    autoWatch : false,
+    autoWatch : true,
 
     browsers : ['Chrome'],
 
     frameworks: ['ng-scenario'],
 
-    singleRun : true,
+    singleRun : false,
 
     proxies : {
-      '/': 'http://localhost:8080/'
+      '/': 'http://localhost/'
     },
 
     plugins : [

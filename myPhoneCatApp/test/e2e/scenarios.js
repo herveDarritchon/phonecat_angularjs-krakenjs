@@ -5,7 +5,7 @@
 describe('my app', function() {
 
 	beforeEach(function() {
-		browser().navigateTo('app/index.html');
+		browser().navigateTo('../app/index.html');
 	});
 
 });
@@ -45,5 +45,35 @@ describe('PhoneCat App', function() {
 			input('query').enter('motorola');
 			expect(repeater('.phones li').count()).toBe(2);
 		});
+
+		it('should display the current filter value within an element with id "status"',
+			function() {
+				expect(element('#status').text()).toMatch(/Current filter: \s*$/);
+
+				input('query').enter('nexus');
+
+				expect(element('#status').text()).toMatch(/Current filter: nexus\s*$/);
+
+				//alternative version of the last assertion that tests just the value of the binding
+				using('#status').expect(binding('query')).toBe('nexus');
+			});
+
+		it('should be possible to control phone order via the drop down select box',
+			function() {
+				//let's narrow the dataset to make the test assertions shorter
+				input('query').enter('tablet');
+
+				expect(repeater('.phones li', 'Phone List').column('phone.name')).
+				toEqual(["Motorola XOOM\u2122 with Wi-Fi",
+					"MOTOROLA XOOM\u2122"]);
+
+				select('orderProp').option('Alphabetical');
+
+				expect(repeater('.phones li', 'Phone List').column('phone.name')).
+				toEqual(["MOTOROLA XOOM\u2122",
+					"Motorola XOOM\u2122 with Wi-Fi"]);
+			});
 	});
 });
+
+
